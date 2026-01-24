@@ -21,9 +21,15 @@
     <ClCompile Include="subject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="relations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="subject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="relation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
