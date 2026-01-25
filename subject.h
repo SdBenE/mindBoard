@@ -6,8 +6,9 @@ class Subject {
 		std::vector<double> conceptPlot{};
 		void checkDims(int currentDims);
 		void plotInit(int dims);
+		std::vector<double> getPlot();
 	public:
 		Subject(int dimensions) { Subject::plotInit(dimensions); };
-		std::vector<double> getPlot();
 		int getDims();
+		double getValueAtDim(int dim);
 };

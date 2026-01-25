@@ -3,7 +3,6 @@
 
 void Subject::plotInit(int dims) {
 	this->conceptPlot.resize(dims);
-	std::cout << this->conceptPlot.size() << std::endl; //TODO: Remove before use
 
 	double input;
 
@@ -26,6 +25,10 @@ std::vector<double> Subject::getPlot() {
 
 int Subject::getDims() {
 	return this->conceptPlot.size();
+}
+
+double Subject::getValueAtDim(int dim) {
+	return this->conceptPlot.at(dim - 1);
 }
 
 void Subject::checkDims(int currentDims) {
