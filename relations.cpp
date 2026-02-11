@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include "subject.h"
-#include "relation.h"
+#include "relations.h"
 
 void compareDims(std::vector<Subject> subjectSet) {
 	for (int i = 0; i < subjectSet.size(); i++) {
@@ -11,8 +11,9 @@ void compareDims(std::vector<Subject> subjectSet) {
 
 double findDistance(Subject subjectP, Subject subjectQ) {
 	if (subjectP.getDims() != subjectQ.getDims()) {
-		std::cout << "<findDistance> Error! Dimensions for distance calculation are not equal" << std::endl;
-		return NULL;
+		//std::cout << "<findDistance> Dimensions for distance calculation are not equal" << std::endl;
+		throw std::invalid_argument("<findDistance> Dimensions for distance calculation are not equal");
+		//return NULL; // This will never happen due to throwing above
 	}
 
 	double determinant{};

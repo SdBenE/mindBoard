@@ -27,6 +27,10 @@ int Subject::getDims() {
 	return this->conceptPlot.size();
 }
 
+std::string Subject::getName() {
+	return this->name;
+}
+
 double Subject::getValueAtDim(int dim) {
 	return this->conceptPlot.at(dim - 1);
 }
