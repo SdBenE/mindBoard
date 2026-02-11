@@ -11,6 +11,7 @@ class Subject {
 		std::vector<double> getPlot();
 	public:
 		Subject(int dimensions) { Subject::plotInit(dimensions); };
+		Subject(std::vector<double> plotArg);
 		std::string getName();
 		int getDims();
 		double getValueAtDim(int dim);

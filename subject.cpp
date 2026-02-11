@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 #include "subject.h"
 
 void Subject::plotInit(int dims) {
@@ -16,6 +17,18 @@ void Subject::plotInit(int dims) {
 		std::cout << "<plotInit> Dimension " << (i + 1) << " input accepted." << std::endl;
 
 		this->conceptPlot.at(i) = input;
+	}
+}
+
+Subject::Subject(std::vector<double> plotArg) {
+	for (int i = 0; i < plotArg.size(); i++) {
+		double plotPoint = plotArg.at(i);
+
+		if (std::abs(plotPoint) > 1) {
+			throw std::invalid_argument("<Subject init> Passed plot point is not -1 <= x <= 1");
+		}
+
+		this->conceptPlot.push_back(plotPoint);
 	}
 }
 
