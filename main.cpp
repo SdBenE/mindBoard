@@ -16,7 +16,6 @@ int main() {
 	subjectList.push_back(&subject2);
 
 
-
 	double distance1to2 = findDistance(mySubject, subject2);
 
 	std::cout << distance1to2 << std::endl;

@@ -12,7 +12,7 @@ void Subject::plotInit(int dims) {
 		do {
 			std::cout << "<plotInit> Dimension " << (i + 1) << " ";
 			std::cin >> input;
-		} while (input < -1 or input > 1);
+		} while (input < -1 || input > 1);
 
 		std::cout << "<plotInit> Dimension " << (i + 1) << " input accepted." << std::endl;
 
@@ -30,6 +30,16 @@ Subject::Subject(std::vector<double> plotArg) {
 
 		this->conceptPlot.push_back(plotPoint);
 	}
+}
+
+Subject::Subject(int dimensions, std::string subjectName) {
+	Subject::plotInit(dimensions);
+	this->name = subjectName;
+}
+
+Subject::Subject(std::vector<double> plotArg, std::string subjectName) {
+	Subject::Subject(plotArg);
+	this->name = subjectName;
 }
 
 std::vector<double> Subject::getPlot() {
