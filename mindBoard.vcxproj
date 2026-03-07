@@ -131,11 +131,13 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="relations.cpp" />
     <ClCompile Include="subject.cpp" />
+    <ClCompile Include="Symptom.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="io.h" />
     <ClInclude Include="relations.h" />
     <ClInclude Include="subject.h" />
+    <ClInclude Include="Symptom.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
